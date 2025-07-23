@@ -35,6 +35,9 @@ class Login extends StatelessWidget {
                 hintStyle: TextStyle(fontSize: 20),
               ),
             ),
+            SizedBox(height: 30),
+
+            ElevatedButton(onPressed: () {}, child: Text("Login")),
           ],
         ),
       ),
