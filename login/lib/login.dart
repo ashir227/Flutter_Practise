@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -55,7 +57,18 @@ class Login extends StatelessWidget {
               ),
               SizedBox(height: 30),
 
-              Row(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Checkbox(value: true, onChanged: (_) {}),
+                      Text("Remeber"),
+                    ],
+                  ),
+                  TextButton(onPressed: () {}, child: Text("Forgot Password?")),
+                ],
+              ),
             ],
           ),
         ),
