@@ -17,7 +17,13 @@ class _CounterState extends State<counterview> {
         children: [
           Text("$counter"),
           SizedBox(height: 13),
-          ElevatedButton(onPressed: () {}, child: Text("count")),
+          ElevatedButton(
+            onPressed: () {
+              counter++;
+              setState(() {});
+            },
+            child: Text("count"),
+          ),
         ],
       ),
     );
