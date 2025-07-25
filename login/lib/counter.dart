@@ -4,32 +4,21 @@ class counterview extends StatefulWidget {
   const counterview({super.key});
 
   @override
-  State<counterview> createState() => _counterviewState();
+  State<counterview> createState() => _CounterState();
 }
 
-class _counterviewState extends State<counterview> {
-  int count = 0;
+class _CounterState extends State<counterview> {
+  int counter = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey,
-        title: Text("Counter App", style: TextStyle(fontSize: 25)),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("$count", style: TextStyle(fontSize: 40)),
-            ElevatedButton(
-              onPressed: () {
-                count++;
-                setState(() {});
-              },
-              child: Text("Count me"),
-            ),
-          ],
-        ),
+      appBar: AppBar(backgroundColor: Colors.grey, title: Text("Counter App")),
+      body: Column(
+        children: [
+          Text("$counter"),
+          SizedBox(height: 13),
+          ElevatedButton(onPressed: () {}, child: Text("count")),
+        ],
       ),
     );
   }
