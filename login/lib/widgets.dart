@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/listview.dart';
 
 class customwidget extends StatefulWidget {
   const customwidget({super.key});
@@ -21,29 +22,24 @@ class _customwidgetState extends State<customwidget> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
+                  width: 150,
                   color: Colors.red,
-                  child: Row(children: [Text("data"), Text("data")]),
+                  child: Row(
+                    children: [Text("data"), SizedBox(width: 20), Text("data")],
+                  ),
                 ),
                 Text("data"),
               ],
             ),
           ),
           SizedBox(height: 3),
-
-          Container(
-            height: 50,
-            color: Colors.grey,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  color: Colors.red,
-                  child: Row(children: [Text("data"), Text("data")]),
-                ),
-                Text("data"),
-              ],
-            ),
-          ),
+          customtile(),
+          SizedBox(height: 3),
+          customtile(),
+          SizedBox(height: 3),
+          customtile(),
+          SizedBox(height: 3),
+          customtile(),
         ],
       ),
       // Container,
