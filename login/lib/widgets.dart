@@ -12,14 +12,41 @@ class _customwidgetState extends State<customwidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.green, title: Text("Whatsapp")),
-      body: Container(
-        color: Colors.grey,
-        height: 50,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [Text("data"), Text("data")],
-        ),
+      body: Column(
+        children: [
+          Container(
+            color: Colors.grey,
+            height: 50,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  color: Colors.red,
+                  child: Row(children: [Text("data"), Text("data")]),
+                ),
+                Text("data"),
+              ],
+            ),
+          ),
+          SizedBox(height: 3),
+
+          Container(
+            height: 50,
+            color: Colors.grey,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  color: Colors.red,
+                  child: Row(children: [Text("data"), Text("data")]),
+                ),
+                Text("data"),
+              ],
+            ),
+          ),
+        ],
       ),
+      // Container,
     );
   }
 }
