@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class customtile extends StatelessWidget {
-  const customtile({super.key});
+  final String name;
+  final bool isEnable = true;
+  const customtile({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -13,14 +15,20 @@ class customtile extends StatelessWidget {
         children: [
           Container(
             width: 150,
-            color: Colors.red,
+            // color: Colors.red,
             child: Row(
-              children: [Text("data"), SizedBox(width: 20), Text("data")],
+              children: [
+                CircleAvatar(backgroundColor: Colors.tealAccent),
+                SizedBox(width: 20),
+                Text(name),
+              ],
             ),
           ),
           Text("data"),
         ],
       ),
     );
+
+    // SizedBox(width: 20,),
   }
 }
