@@ -24,7 +24,7 @@ class customtile extends StatelessWidget {
               ],
             ),
           ),
-          Text("data"),
+          if (isEnable) ...[Text("data")],
         ],
       ),
     );
