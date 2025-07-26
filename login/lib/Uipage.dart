@@ -17,11 +17,14 @@ class _UIState extends State<UI> {
         margin: EdgeInsets.only(top: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-
           children: [
             Text(
               "Flutter",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [Icon(Icons.flutter_dash_rounded)],
             ),
           ],
         ),
