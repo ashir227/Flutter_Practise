@@ -25,19 +25,22 @@ class _UIState extends State<UI> {
                   "Flutter",
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
                 ),
-                Icon(Icons.notifications),
+                Icon(
+                  Icons.notifications,
+                  color: const Color.fromARGB(255, 15, 115, 197),
+                ),
               ],
             ),
           ),
           SizedBox(height: 20),
           Container(
             height: 170,
-            width: 330,
+            width: double.infinity,
             padding: EdgeInsets.symmetric(vertical: 10),
-            margin: EdgeInsets.symmetric(horizontal: 20),
+            margin: EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
               color: Color(0xFFE8F1FF),
-              borderRadius: BorderRadius.circular(25),
+              borderRadius: BorderRadius.circular(22),
             ),
             child: Stack(
               alignment: Alignment.center,
@@ -54,6 +57,30 @@ class _UIState extends State<UI> {
                       isplay = !isplay;
                     });
                   },
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 12),
+          Container(
+            height: 80,
+            width: double.infinity,
+
+            margin: EdgeInsets.symmetric(horizontal: 13),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Flutter Complete Course",
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
+                ),
+                Text(
+                  "Created By Ashu Programmer",
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  "35 videos",
+                  style: TextStyle(fontWeight: FontWeight.w400),
                 ),
               ],
             ),
