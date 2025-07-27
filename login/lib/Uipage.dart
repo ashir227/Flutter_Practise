@@ -133,21 +133,55 @@ class _UIState extends State<UI> {
             ),
           ),
           Container(
+            color: Colors.amber,
             height: 60,
             // padding: EdgeInsets.only(top: 10),
-            color: Colors.yellow,
+            // color: Colors.yellow,
             margin: EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.play_circle, size: 45, color: Colors.blue),
+                  icon: Icon(Icons.play_circle, size: 47, color: Colors.blue),
                 ),
                 SizedBox(height: 10),
+                Container(
+                  padding: EdgeInsets.only(top: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("Introduction to Flutter"),
+                      Text("20 min 50 sec"),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 4),
+          Container(
+            color: Colors.amber,
+            height: 60,
+            margin: EdgeInsets.symmetric(horizontal: 20),
+            // padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Column(
+              children: [
                 Column(
                   children: [
-                    Text("Introduction to Flutter"),
-                    Text("20 min 50 sec"),
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.play_circle,
+                            size: 47,
+                            color: Colors.lightBlue,
+                          ),
+                        ),
+                        Text("Installing Flutter on Windows"),
+                        Text("20 min 50 sec"),
+                      ],
+                    ),
                   ],
                 ),
               ],
