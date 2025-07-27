@@ -47,12 +47,11 @@ class _UIState extends State<UI> {
                   icon: Icon(
                     Icons.play_circle_fill,
                     size: 60,
-                    color: Colors.white,
+                    color: isplay ? Colors.red : Colors.white,
                   ),
                   onPressed: () {
                     setState(() {
                       isplay = !isplay;
-                      isplay ? Colors.red : Colors.white;
                     });
                   },
                 ),
