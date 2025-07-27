@@ -8,6 +8,7 @@ class UI extends StatefulWidget {
 }
 
 class _UIState extends State<UI> {
+  bool isplay = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,13 +29,34 @@ class _UIState extends State<UI> {
               ],
             ),
           ),
-          SizedBox(height: 33),
+          SizedBox(height: 20),
           Container(
-            height: 150,
-            padding: EdgeInsets.all(60),
-            color: const Color.fromARGB(255, 42, 121, 18),
-            child: Column(
-              children: [Image.asset("assets/images/logo.jpg", height: 200)],
+            height: 170,
+            width: 330,
+            padding: EdgeInsets.symmetric(vertical: 10),
+            margin: EdgeInsets.symmetric(horizontal: 20),
+            decoration: BoxDecoration(
+              color: Color(0xFFE8F1FF),
+              borderRadius: BorderRadius.circular(25),
+            ),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Image.asset("assets/images/logo.jpg", height: 150),
+                IconButton(
+                  icon: Icon(
+                    Icons.play_circle_fill,
+                    size: 60,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      isplay = !isplay;
+                      isplay ? Colors.red : Colors.white;
+                    });
+                  },
+                ),
+              ],
             ),
           ),
         ],
