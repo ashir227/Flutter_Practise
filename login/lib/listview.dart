@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class customtile extends StatelessWidget {
   final String name;
-  final bool isEnable = true;
+  final isEnable = true;
   const customtile({super.key, required this.name});
 
   @override
