@@ -76,7 +76,7 @@ class _UIState extends State<UI> {
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
                 ),
                 Text(
-                  "Created By Ashu Programmer",
+                  "Created By Ashir Programmer",
                   style: TextStyle(fontWeight: FontWeight.w500),
                 ),
                 Text(
@@ -97,8 +97,14 @@ class _UIState extends State<UI> {
               children: [
                 ElevatedButton(
                   onPressed: () {},
+
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusGeometry.circular(9),
+                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 35, vertical: 12),
                     textStyle: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w600,
@@ -108,16 +114,41 @@ class _UIState extends State<UI> {
                 ),
                 ElevatedButton(
                   onPressed: () {},
+
                   style: ElevatedButton.styleFrom(
-                    side: BorderSide(),
-                    shape: border,
-                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 12),
+                    foregroundColor: Colors.white,
+                    backgroundColor: const Color.fromARGB(255, 82, 170, 241),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusGeometry.circular(9),
+                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
                     textStyle: TextStyle(
                       fontSize: 17,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                   child: Text("Description"),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            height: 60,
+            // padding: EdgeInsets.only(top: 10),
+            color: Colors.yellow,
+            margin: EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.play_circle, size: 45, color: Colors.blue),
+                ),
+                SizedBox(height: 10),
+                Column(
+                  children: [
+                    Text("Introduction to Flutter"),
+                    Text("20 min 50 sec"),
+                  ],
                 ),
               ],
             ),
