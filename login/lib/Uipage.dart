@@ -48,7 +48,7 @@ class _UIState extends State<UI> {
                 Image.asset("assets/images/logo.jpg", height: 150),
                 IconButton(
                   icon: Icon(
-                    Icons.play_circle_fill,
+                    Icons.play_circle_filled_outlined,
                     size: 60,
                     color: isplay ? Colors.red : Colors.white,
                   ),
@@ -63,7 +63,8 @@ class _UIState extends State<UI> {
           ),
           SizedBox(height: 12),
           Container(
-            height: 80,
+            // color: Colors.amber,
+            height: 72,
             width: double.infinity,
 
             margin: EdgeInsets.symmetric(horizontal: 13),
@@ -81,6 +82,42 @@ class _UIState extends State<UI> {
                 Text(
                   "35 videos",
                   style: TextStyle(fontWeight: FontWeight.w400),
+                ),
+              ],
+            ),
+          ),
+
+          Container(
+            margin: EdgeInsets.all(20),
+            color: Color(0xFFE8F1FF),
+            width: double.infinity,
+            height: 60,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
+                    textStyle: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  child: Text("Videos"),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    side: BorderSide(),
+                    shape: border,
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 12),
+                    textStyle: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  child: Text("Description"),
                 ),
               ],
             ),
