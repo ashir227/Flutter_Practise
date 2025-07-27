@@ -24,7 +24,7 @@ class _UIState extends State<UI> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [Icon(Icons.flutter_dash_rounded)],
+              children: [Icon(Icons.notifications)],
             ),
           ],
         ),
