@@ -54,6 +54,23 @@ class _Ui2State extends State<Ui2> {
                   color: isfav ? Colors.white : Colors.greenAccent,
                 ),
               ),
+              Container(
+                width: double.infinity,
+                color: Colors.amber,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text.rich(
+                      TextSpan(
+                        children: [
+                          TextSpan(text: "Unit", style: TextStyle()),
+                          TextSpan(text: "2", style: TextStyle()),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
