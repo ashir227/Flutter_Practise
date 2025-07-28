@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/UI2.dart';
 import 'package:login/Uipage.dart';
 import 'package:login/counter.dart';
 import 'package:login/login.dart';
@@ -14,6 +15,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: UI());
+    return MaterialApp(home: Ui2());
   }
 }
