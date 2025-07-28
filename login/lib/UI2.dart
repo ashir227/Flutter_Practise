@@ -12,67 +12,69 @@ class _Ui2State extends State<Ui2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          // decoration: BoxDecoration(borderRadius: BorderRadius.circular(33)),
-          height: 250,
-          // margin: EdgeInsets.only(bottom: 200),
-          padding: EdgeInsets.only(bottom: 130),
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(215, 48, 7, 255),
-            borderRadius: BorderRadius.only(
-              // bottomLeft: Radius.circular(30),
-              bottomRight: Radius.circular(120),
+      body: Container(
+        width: double.infinity,
+        height: 250,
+        color: const Color.fromARGB(255, 54, 11, 228),
+
+        child: Column(
+          children: [
+            SizedBox(height: 35),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    size: 25,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  "ENGLISH",
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      isfav = !isfav;
+                    });
+                  },
+                  icon: Icon(
+                    Icons.account_circle_rounded,
+                    size: 40,
+                    color: isfav ? Colors.white : Colors.yellow,
+                  ),
+                ),
+              ],
             ),
-          ),
-          child: Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.arrow_back_ios, size: 33, color: Colors.white),
-              ),
-              Spacer(),
-              Text(
-                "ENGLISH",
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              Spacer(),
-              IconButton(
-                onPressed: () {
-                  setState(() {
-                    isfav = !isfav;
-                  });
-                },
-                icon: Icon(
-                  Icons.ac_unit_sharp,
-                  size: 44,
-                  color: isfav ? Colors.white : Colors.greenAccent,
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                color: Colors.amber,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text.rich(
+            Row(
+              children: [
+                Text.rich(
+                  TextSpan(
+                    children: [
                       TextSpan(
-                        children: [
-                          TextSpan(text: "Unit", style: TextStyle()),
-                          TextSpan(text: "2", style: TextStyle()),
-                        ],
+                        text: "Unit ",
+                        style: TextStyle(color: Colors.grey, fontSize: 50),
                       ),
-                    ),
-                  ],
+                      TextSpan(
+                        text: "2",
+                        style: TextStyle(
+                          fontSize: 35,
+                          color: Colors.yellowAccent,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          ],
         ),
       ),
     );
