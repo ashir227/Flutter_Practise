@@ -162,27 +162,32 @@ class _UIState extends State<UI> {
           Container(
             color: Colors.amber,
             height: 60,
+            // padding: EdgeInsets.only(top: 10),
+            // color: Colors.yellow,
             margin: EdgeInsets.symmetric(horizontal: 20),
-            // padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Column(
+            child: Row(
               children: [
-                Column(
-                  children: [
-                    Row(
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.play_circle,
-                            size: 47,
-                            color: Colors.lightBlue,
-                          ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.play_circle, size: 47, color: Colors.blue),
+                ),
+                SizedBox(height: 10),
+                Container(
+                  padding: EdgeInsets.only(top: 11),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("Installing Flutter on Windows"),
+                      Container(
+                        width: 140,
+
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [Text("30 min 50 sec")],
                         ),
-                        Text("Installing Flutter on Windows"),
-                        Text("20 min 50 sec"),
-                      ],
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
