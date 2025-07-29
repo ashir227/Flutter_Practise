@@ -53,26 +53,60 @@ class _Ui2State extends State<Ui2> {
                 ),
               ],
             ),
-            Row(
-              children: [
-                Text.rich(
-                  TextSpan(
+            Container(
+              // height: 100,
+              color: Colors.amber,
+              margin: EdgeInsets.only(left: 32, top: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Unit ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 43,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "2",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 35,
+                            color: Colors.yellowAccent,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
                     children: [
-                      TextSpan(
-                        text: "Unit ",
-                        style: TextStyle(color: Colors.grey, fontSize: 50),
-                      ),
-                      TextSpan(
-                        text: "2",
-                        style: TextStyle(
-                          fontSize: 35,
-                          color: Colors.yellowAccent,
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.account_circle_rounded,
+                          size: 40,
+                          color: Colors.cyan,
                         ),
                       ),
                     ],
                   ),
-                ),
-              ],
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 30),
+              child: Row(
+                children: [
+                  Text(
+                    "JOBS AND SCHOOLS",
+                    style: TextStyle(color: Colors.white, fontSize: 28),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
